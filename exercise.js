@@ -72,7 +72,7 @@ const articleContainer = document.querySelector('#mainArticles');
 
 btnText.addEventListener('click', function(){
     let newParagraph = document.createElement('p');
-    newParagraph.innerText = "Hello";
+    newParagraph.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec diam at mauris malesuada fermentum. Donec blandit mi sed semper.";
     articleContainer.appendChild(newParagraph)} )
 
 
@@ -102,6 +102,7 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
+
 
 /*
 Task 7
