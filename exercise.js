@@ -15,7 +15,18 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
+const paragraph = document.querySelectorAll("p");
+ console.log(paragraph);
 
+ const div = document.querySelectorAll("div");
+ const firstDiv = div [0];
+ console.log(firstDiv);
+
+const jumboTron = document.querySelector("#jumbotron-text");
+console.log(jumboTron);
+
+const paragraphPrimary  = document.querySelector(".primary-content").querySelectorAll("p");
+console.log(paragraphPrimary);
 
 /*
 Task 2
@@ -23,6 +34,13 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+let buttonA = document.querySelector("#alertBtn");
+
+function buttonAlert(){
+    alert("Thanks for visiting Bikes for Refugees!");
+}
+
+buttonA.addEventListener("click", buttonAlert);
 
 
 /*
@@ -31,7 +49,13 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+let buttonColor = document.querySelector("#bgrChangeBtn");
 
+function changeBgr(){
+    document.body.style.backgroundColor = "#B5B2B2";
+}
+
+buttonColor.addEventListener("click", changeBgr);
 
 /*
 Task 4
@@ -42,13 +66,33 @@ When a user clicks the ‘Add some text’ button, a new paragraph should be add
 
 
 
+const btnText = document.querySelector("#addTextBtn");
+const articleContainer = document.querySelector('#mainArticles');
+
+
+btnText.addEventListener('click', function(){
+    let newParagraph = document.createElement('p');
+    newParagraph.innerText = "Hello";
+    articleContainer.appendChild(newParagraph)} )
+
+
 /*
 Task 5
 ======
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+const btnLarger = document.querySelector('#largerLinksBtn');
 
+btnLarger.addEventListener('click', function(){
+    let links = document.querySelectorAll('a');
+    console.log(links);
+    links.forEach(link => {
+        link.style.fontSize = 30 + 'px';
+
+    });
+ 
+})
 
 /*
 Task 6
